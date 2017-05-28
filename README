@@ -1,0 +1,16 @@
+Author: Yiwei Cai
+Email:1122120220@hit.edu.cn
+
+What is it?
+    It's a script for gem5 to show graph clearly.
+
+Environment:
+    linux, python2.7.6, bokeh, Maybe use numpy later if neccessary.
+
+How to use?
+    python gem5py_main -d [dir] -d [dir] ...
+    or  
+    python gem5py_main -d .
+    (it means all dirs in this catalog)
+Help:    
+    you can "python gem5py_main -h" for help
