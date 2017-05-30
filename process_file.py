@@ -23,7 +23,8 @@ def find_dir(argv, inputfolder):
                 get_dir = os.listdir(cur_path)   #遍历当前目录，获取文件列表
                 for sub_dir in get_dir:
                     if os.path.isdir(sub_dir):   #如果当前是文件夹
-                        if sub_dir != '.git':    #其他类型的文件夹这里没有进行过滤处理
+                        if re.match(r'l\dsize\S', sub_dir):
+                        # sif sub_dir != '.git':    #其他类型的文件夹这里没有进行过滤处理
                             inputfolder.append(sub_dir)
             else:
                 inputfolder.append(arg)
