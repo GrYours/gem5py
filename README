@@ -1,16 +1,24 @@
 Author: Yiwei Cai
-Email:1122120220@hit.edu.cn
+Email:  1122120220@hit.edu.cn
+
+通过json进行文件存储，使用Bokeh serve的方式是输入 bokeh serve plot_line.py
+在浏览器输入 http://localhost:5006 即可打开图形界面
+目前版本还没有很多细节没有实现，需要较长的时间进行修正
+图形界面sim和bench暂时没有效果，只是把接口空出来
 
 What is it?
     It's a script for gem5 to show graph clearly.
 
 Environment:
-    linux, python2.7.6, bokeh, Maybe use numpy later if neccessary.
+    linux, python2.7.6, bokeh, Maybe use 'numpy' later if neccessary.
 
-How to use?
+How to create json?
     python gem5py_main -d [dir] -d [dir] ...
     or  
     python gem5py_main -d .
-    (it means all dirs in this catalog)
+    (it means all dirs in this catalog,so it can only contain 'l*size***' type dirs).
 Help:    
-    you can "python gem5py_main -h" for help
+    you can "python gem5py_main -h" for help.(It's not completed)
+
+Other:
+    add #-*- coding:utf-8 -*- so we can use Chinese in files.

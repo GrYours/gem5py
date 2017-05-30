@@ -51,8 +51,8 @@ def getdata_fromfile(sim_dict, inputfolder):
                             item = re.findall(r'(\S+)\s+(\d+[.]{0,1}\d+)\s+(\d+[.]{0,1}\d+%)\s+(\d+[.]{0,1}\d+%)\s+(#\s.+)\n{0,1}', context)
                             if item != []:
                                 index_temp[item[0][0]] = float(item[0][1])
-                                index_temp[item[0][0]+'_pdf'] = item[0][2]  # pdf
-                                index_temp[item[0][0]+'_cdf'] = item[0][3]  # cdf
+                                index_temp[item[0][0]+'_pdf'] = float(item[0][2][:-1])  # pdf
+                                index_temp[item[0][0]+'_cdf'] = float(item[0][3][:-1])  # cdf
                         else:
                             index_temp[item[0][0]] = int(item[0][1])
                     else:
