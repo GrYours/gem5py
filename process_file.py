@@ -36,9 +36,9 @@ def getdata_fromfile(sim_dict, inputfolder):
         bench_index_temp = {} 
         path = os.path.join('.', sim_name)
         for files in os.listdir(path): 
-            if os.path.splitext(files)[1] == '.stats':        #只打开.stats格式的文件
-                bench_name = os.path.splitext(files)[0]       #bench name
-                files = os.path.join(sim_name, files)         #要加上路径
+            if os.path.splitext(files)[1] == '.stats':        # 只打开.stats格式的文件
+                bench_name = os.path.splitext(files)[0]       # bench name
+                files = os.path.join(sim_name, files)         # 要加上路径
                 f = open(files, 'r')
                 index_temp = {}
                 for context in f.readlines()[2:1037]:

@@ -1,7 +1,6 @@
 #-*- coding:utf-8 -*-
 import sys
 import json
-# import numpy as np    # 等矩阵处理的时候再考虑
 import process_file
 # import plot_line
 
