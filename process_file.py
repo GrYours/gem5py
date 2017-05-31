@@ -48,12 +48,15 @@ def getdata_fromfile(sim_dict, inputfolder):
                     if item == []:
                         item = re.findall(r'(\S+)\s+(\d+)\s+(#\s.+)\n', context) # sim_seconds   1   # Number of seconds simulated
                         if item == []:
-                            # system.mem_ctrls.bytes_read::switch_cpus.data       786960   40.00%      60.00%      # Number of bytes read from this memory
-                            item = re.findall(r'(\S+)\s+(\d+[.]{0,1}\d+)\s+(\d+[.]{0,1}\d+%)\s+(\d+[.]{0,1}\d+%)\s+(#\s.+)\n{0,1}', context)
+                            # system.switch_cpus.op_class::No_OpClass          4919      0.06%      0.06% # Class of executed instruction
+                            # item = re.findall(r'(\S+)\s+(\d+[.]{0,1}\d+)\s+(\d+[.]{0,1}\d+%)\s+(\d+[.]{0,1}\d+%)\s+(#\s.+)\n{0,1}', context)
+                            item = re.findall(r'(\S+)\s+(\d+)\s+(\d+[.]{0,1}\d+%)\s+(\d+[.]{0,1}\d+%)\s+(#\s.+)\n{0,1}', context)
+                            # print item
                             if item != []:
                                 index_temp[item[0][0]] = float(item[0][1])
-                                index_temp[item[0][0]+'_pdf'] = float(item[0][2][:-1])  # pdf
-                                index_temp[item[0][0]+'_cdf'] = float(item[0][3][:-1])  # cdf
+                                index_temp[item[0][0]+'_pdf'] = float(item[0][2][:-1])  # system.switch_cpus.op_class::No_OpClass_pdf
+                                # print index_temp[item[0][0]+'_pdf']
+                                index_temp[item[0][0]+'_cdf'] = float(item[0][3][:-1])  # system.switch_cpus.op_class::No_OpClass_cdf
                         else:
                             index_temp[item[0][0]] = int(item[0][1])
                     else:
