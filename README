@@ -29,7 +29,7 @@ Version 2.0
 修正了cdf和pdf类型在正则查找过程遇到的bug
 
 
-Version 2.0
+Version 2.1
 
 左图的横坐标没法改变，所以左图暂时无法做到动态显示，再有简单方法实现之前不予考虑，当可以通过更改如下代码改变横坐标
 value_name_mul = MultiSelect(title="value_name_mul", value=['sim_seconds','sim_ticks'], options=value_name_list)
@@ -37,4 +37,7 @@ value_name_mul = MultiSelect(title="value_name_mul", value=['sim_seconds','sim_t
 
 增加了某个sim某个bench某个value的真实值，以及单个sim，不同bench的某value平均值
 修正了value的选择，改为下拉的方式（通过字母排序）
+
+
+Version 2.2
 
