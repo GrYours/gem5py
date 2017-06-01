@@ -40,4 +40,4 @@ value_name_mul = MultiSelect(title="value_name_mul", value=['sim_seconds','sim_t
 
 
 Version 2.2
-
+需要安装pandas和numpy库
