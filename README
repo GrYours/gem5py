@@ -20,7 +20,6 @@ Other:
     add #-*- coding:utf-8 -*- so we can use Chinese in files.
 -----------------------------------------------------------------------------------------
 Version 2.0
-
 通过json进行文件存储，使用Bokeh serve的方式是输入 bokeh serve plot_line.py
 在浏览器输入 http://localhost:5006 即可打开图形界面
 目前版本还没有很多细节没有实现，需要较长的时间进行修正
@@ -28,16 +27,24 @@ Version 2.0
 修正了process_file.py文件夹检索，现在能够只搜索l*size**,不需要考虑其他文件夹
 修正了cdf和pdf类型在正则查找过程遇到的bug
 
-
 Version 2.1
-
 左图的横坐标没法改变，所以左图暂时无法做到动态显示，再有简单方法实现之前不予考虑，当可以通过更改如下代码改变横坐标
 value_name_mul = MultiSelect(title="value_name_mul", value=['sim_seconds','sim_ticks'], options=value_name_list)
 其中的['sim_seconds','sim_ticks']
-
 增加了某个sim某个bench某个value的真实值，以及单个sim，不同bench的某value平均值
 修正了value的选择，改为下拉的方式（通过字母排序）
 
-
 Version 2.2
-需要安装pandas和numpy库
+表格化输出完成
+
+Version 3.0
+满足了基本功能需求
+
+# processing dirs or files
+python gem5py_main -d [dir] -d [dir] ...
+    or  
+python gem5py_main -d .
+# start serve
+bokeh serve plot_line.py
+# open html
+http://localhost:5006
